@@ -40,7 +40,7 @@ https://openweathermap.org/api
 
 - Add your API key in your project:
 
-const API_KEY = "Your API Key Here";
+    const API_KEY = "your_api_key_here";
 
 ---
 

@@ -14,7 +14,7 @@ function MainDetailsBox({ item, value }) {
   );
 }
 
-const API_KEY = "0abdbb13261c239afb493cd6e3685d54";
+const API_KEY = "your_api_key_here";
 
 function App() {
   const [city, setCity] = useState('');
