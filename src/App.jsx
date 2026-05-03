@@ -14,7 +14,7 @@ function MainDetailsBox({ item, value }) {
   );
 }
 
-
+const API_KEY = "0abdbb13261c239afb493cd6e3685d54";
 
 function App() {
   const [city, setCity] = useState('');
@@ -23,7 +23,7 @@ function App() {
   const fetchWeatherData = async (city) => {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0abdbb13261c239afb493cd6e3685d54`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
     );
 
     const data = await response.json();
@@ -52,7 +52,12 @@ function App() {
     <div className="container">
 
       <div className='input-container'>
-        <input type="text" placeholder='Enter city name' value={city} onChange={(e) => setCity(e.target.value)} />
+        <input type="text" 
+        placeholder='Enter city name' 
+        value={city} 
+        onChange={(e) => setCity(e.target.value)} 
+        onKeyDown={(e) => e.key === 'Enter' && fetchWeatherData(city)} 
+        />
         <button onClick={() => fetchWeatherData(city)}>🔍︎</button>
       </div>
 
@@ -60,8 +65,8 @@ function App() {
       <div className='main-card'>
         <div className='modern-design'>
           <h5 >{weatherData ? weatherData.name : 'N/A'}</h5>
-          <h1>{weatherData ? (weatherData.main.temp - 273.15).toFixed(0) + "°C" : 'N/A'}</h1>
-          <h6>{weatherData ? weatherData.weather[0].description : 'N/A'}</h6>
+          <h1>{weatherData ? (weatherData.main?.temp - 273.15).toFixed(0) + "°C" : 'N/A'}</h1>
+          <h6>{weatherData ? weatherData.weather[0]?.description : 'N/A'}</h6>
         </div>
         <div className='image'>
         <img src="src/assets/pngtree-flat-sun-cloud-icon-free-vector-png-image_6582790.png" alt="Weather Icon" />
@@ -70,7 +75,7 @@ function App() {
 
       
       <div className='main-details-container'>
-        <MainDetailsBox item="Humidity" value={weatherData ? weatherData.main.humidity + "%" : 'N/A'} />
+        <MainDetailsBox item="Humidity" value={weatherData ? weatherData?.main?.humidity + "%" : 'N/A'} />
         <MainDetailsBox item="Wind Speed" value={weatherData ? (weatherData?.wind?.speed * 3.6).toFixed(1) + " km/h" : 'N/A'} />
       </div>
     </div>
