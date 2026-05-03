@@ -23,7 +23,7 @@ function App() {
 
   const fetchWeatherData = async (city) => {
     setLoading(true);
-    
+
     try {
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
@@ -33,13 +33,13 @@ function App() {
 
       if (data.cod !== 200) {
         throw new Error(data.message);
-        
+
       }
 
       console.log(data);
       setWeatherData(data);
       setCity('');
-      
+
     } catch (error) {
       console.error("Error:", error.message);
       setWeatherData(weatherData);
@@ -59,11 +59,11 @@ function App() {
 
     <div className="container">
       {loading && (
-      <div className='overlay'>
-        <div className='loader'></div>
-        <p className='text'>Loading weather data...</p>
-      </div>
-    )}
+        <div className='overlay'>
+          <div className='loader'></div>
+          <p className='text'>Loading weather data...</p>
+        </div>
+      )}
 
       <div className='input-container'>
         <input type="text"
@@ -87,7 +87,7 @@ function App() {
         </div>
 
 
-        
+
       </div >
 
 
