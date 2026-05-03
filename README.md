@@ -10,6 +10,12 @@ A modern React Weather App that fetches real-time weather data using the OpenWea
 
 ---
 
+## 📸 Preview
+
+<img src="Screenshot/weather-app.png" width=300px>
+
+---
+
 ## 🚀 Features
 
 - 🔍 Search any city weather instantly  
