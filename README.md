@@ -4,7 +4,7 @@ A modern, responsive weather application built with React that fetches real-time
 
 ---
 
-## 📌 Description (350 chars)
+## 📌 Description 
 
 A modern React Weather App that fetches real-time weather data using the OpenWeather API. It displays temperature, humidity, wind speed, and weather conditions with a clean UI, loading state, and error handling. Users can search any city worldwide and get instant live weather updates.
 
@@ -26,7 +26,6 @@ A modern React Weather App that fetches real-time weather data using the OpenWea
 - ⏳ Loading spinner overlay  
 - ⚠️ Error handling for invalid cities  
 - 🎨 Modern glassmorphism UI design  
-- 📱 Responsive layout  
 
 ---
 
