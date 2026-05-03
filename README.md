@@ -12,7 +12,7 @@ A modern React Weather App that fetches real-time weather data using the OpenWea
 
 ## 📸 Preview
 
-<img src="Screenshot/weather-app.png" width=300px>
+<img src="Screenshot/weather-app.png" width=500px>
 
 ---
 
