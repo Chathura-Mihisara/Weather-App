@@ -21,13 +21,26 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
 
   const fetchWeatherData = async (city) => {
-   
-      let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0abdbb13261c239afb493cd6e3685d54`)
-      let data = await response.json()
-      console.log(data)
-      setWeatherData(data);
-   
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0abdbb13261c239afb493cd6e3685d54`
+    );
+
+    const data = await response.json();
+
+    if (data.cod !== 200) {
+      throw new Error(data.message);
+    }
+
+    console.log(data);
+    setWeatherData(data);
+
+  } catch (error) {
+    console.error("Error:", error.message);
+    setWeatherData(weatherData);
+    alert("City not found or API error");
   }
+};
 
   useEffect(() => {
     fetchWeatherData("Galle");
