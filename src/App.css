@@ -4,30 +4,33 @@
     gap: 5px;
 
     padding: 10px;
-    border-Radius: 5px;
-    min-Width: 140px;
+    border-radius: 5px;
+    min-width: 140px;
     align-items: center;
     font-weight: bold;
     color: #faf9f6;
     border: 0px solid #faf9f67f;
-    /* box-shadow: 0 0 5px #faf9f6;; */
-    /* background: #010013; */
-
-
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.47);
-
-    /* background: linear-gradient(135deg, rgba(12, 117, 117, 0.386), rgba(0, 0, 0, 0.438)); */
-    background: rgba(255, 255, 255, 0.15);
+ 
+    background: rgba(31, 30, 30, 0.207);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(12px);
 
     transition: all 0.3s ease;
 }
 
+.main-details-box h6 {
+    font-size: 12px;
+    font-weight: bold;
+    color: lch(74.89% 43.53 243.27);
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+}
+
 .main-details-box:hover {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(12px);
-    /* box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.67); */
+    
 }
 
 .container {
@@ -39,9 +42,8 @@
 
     padding: 20px;
     padding-top: 40px;
-    /* background: linear-gradient(100deg, rgba(6, 44, 40, 0.927), rgba(0, 0, 0, 0.818)); */
-    /* background: #010013; */
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Ksud2T0bOzceKVqno1AQV675FWwfrkN2Aw&s") center/cover;
+   
+    background: url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-54587.jpg?semt=ais_hybrid&w=740&q=80") center/cover;
     width: auto;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.47);
 }
@@ -138,8 +140,7 @@
     border-Radius: 8px;
 
     padding: 20px;
-    /* background: linear-gradient(100deg, rgba(6, 44, 40, 0.927), rgba(0, 0, 0, 0.818)); */
-    background: transparent;
+   background: transparent;
     width: auto;
 
     color: #faf9f6;
@@ -147,13 +148,13 @@
 
 .modern-design h1 {
     font-size: 45px;
-    font-style: bold;
+    font-weight: bold;
    text-justify: center; 
 }
 
 .modern-design h5 {
     font-size: 24px;
-    font-style: bold;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -172,8 +173,7 @@
     padding: 20px;
     padding-inline: 28px;
     padding-left: 6px;
-    /* background: linear-gradient(100deg, rgba(6, 44, 40, 0.927), rgba(0, 0, 0, 0.818)); */
-    /* background: #010013; */
+    background: rgba(31, 30, 30, 0.207);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     width: 92%;

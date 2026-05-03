@@ -7,8 +7,8 @@ function MainDetailsBox({ item, value }) {
   return (
 
     <div className='main-details-box'>
-      <div><span>{item}</span></div>
-      <div><span>{value}</span></div>
+      <div><h6>{item}</h6></div>
+      <div><h3>{value}</h3></div>
     </div>
 
   );
